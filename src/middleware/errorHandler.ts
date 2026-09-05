@@ -24,6 +24,19 @@ function multerToAppError(err: multer.MulterError): AppError {
   return new AppError(400, "FILE_REQUIRED", "Resume PDF is required");
 }
 
+function payloadTooLargeError(err: unknown): AppError | null {
+  if (
+    err &&
+    typeof err === "object" &&
+    "type" in err &&
+    (err as { type?: string }).type === "entity.too.large"
+  ) {
+    return new AppError(413, "PAYLOAD_TOO_LARGE", "Request payload is too large");
+  }
+
+  return null;
+}
+
 export function errorHandler(
   err: unknown,
   req: Request,
@@ -35,7 +48,7 @@ export function errorHandler(
       ? err
       : err instanceof multer.MulterError
         ? multerToAppError(err)
-        : null;
+        : payloadTooLargeError(err);
 
   const statusCode = mappedError?.statusCode ?? 500;
   const errorCode = mappedError?.errorCode ?? "INTERNAL_ERROR";

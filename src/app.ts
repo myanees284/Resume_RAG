@@ -6,6 +6,7 @@ import { errorHandler } from "./middleware/errorHandler";
 import { logger } from "./middleware/logger";
 import { requestId } from "./middleware/requestId";
 import { ingestionRoutes } from "./modules/ingestion/routes/ingestionRoutes";
+import { retrievalRoutes } from "./modules/retrieval/routes/retrievalRoutes";
 
 export function createApp(): Application {
   const app = express();
@@ -46,6 +47,7 @@ export function createApp(): Application {
   });
 
   app.use("/v1", ingestionRoutes);
+  app.use("/v1", retrievalRoutes);
 
   app.use(errorHandler);
 

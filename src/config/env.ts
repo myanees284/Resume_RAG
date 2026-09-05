@@ -27,6 +27,8 @@ export const env = {
   dbName: optional("DB_NAME", optional("MONGODB_DB_NAME", "resume_rag")),
   collectionName: optional("COLLECTION_NAME", "resumes"),
   vectorIndexName: optional("VECTOR_INDEX_NAME", "resumes_index"),
+  bm25IndexName: optional("BM25_INDEX_NAME", "bm25_search"),
+  retrievalDefaultTopK: optionalNumber("RETRIEVAL_DEFAULT_TOP_K", 20),
 
   mistralApiKey: optional("MISTRAL_API_KEY", ""),
   mistralEmbedModel: optional(
@@ -38,6 +40,7 @@ export const env = {
   useLlmParser: optional("USE_LLM_PARSER", "false") === "true",
   groqApiKey: optional("GROQ_API_KEY", ""),
   groqModel: optional("GROQ_MODEL", optional("LLM_MODEL", "")),
+  rerankDefaultTopN: optionalNumber("RERANK_DEFAULT_TOP_N", 10),
 
   maxUploadSizeMb: optionalNumber("MAX_UPLOAD_SIZE_MB", 5),
 };

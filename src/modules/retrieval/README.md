@@ -1,3 +1,4 @@
-Keep this module empty until ingestion is complete and verified.
+Retrieval is implemented in the same Express app as ingestion.
 
-Retrieval will be added here and will reuse the same Express app, MongoDB connection, `resumes` collection, and stored embeddings.
+Use GET /v1/search/readiness before search. Production search is POST /v1/search.
+BM25, vector, hybrid, rerank, and summarize remain available for debugging.
