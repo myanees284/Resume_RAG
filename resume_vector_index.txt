@@ -1,0 +1,84 @@
+resume_vector_index:
+
+{
+  "fields": [
+    {
+      "numDimensions": 1024,
+      "path": "embedding",
+      "similarity": "cosine",
+      "type": "vector"
+    },
+    {
+      "path": "id",
+      "type": "filter"
+    },
+    {
+      "path": "name",
+      "type": "filter"
+    },
+    {
+      "path": "email",
+      "type": "filter"
+    },
+    {
+      "path": "phone",
+      "type": "filter"
+    },
+    {
+      "path": "currentOrganisation",
+      "type": "filter"
+    },
+    {
+      "path": "currentTitle",
+      "type": "filter"
+    },
+    {
+      "path": "locations",
+      "type": "filter"
+    },
+    {
+      "path": "skills",
+      "type": "filter"
+    },
+    {
+      "path": "technologies",
+      "type": "filter"
+    },
+    {
+      "path": "yearsOfExperience",
+      "type": "filter"
+    },
+    {
+      "path": "totalExperience",
+      "type": "filter"
+    },
+    {
+      "path": "relevantExperience",
+      "type": "filter"
+    },
+    {
+      "path": "educationLevel",
+      "type": "filter"
+    },
+    {
+      "path": "text",
+      "type": "filter"
+    },
+    {
+      "path": "certifications",
+      "type": "filter"
+    },
+    {
+      "path": "languages",
+      "type": "filter"
+    },
+    {
+      "path": "uploadedAt",
+      "type": "filter"
+    },
+    {
+      "path": "fullContent",
+      "type": "filter"
+    }
+  ]
+}

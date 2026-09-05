@@ -1,0 +1,89 @@
+#BM25
+
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "certifications": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "currentOrganisation": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "currentTitle": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "educationLevel": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "email": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "fullContent": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "id": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "languages": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "locations": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "name": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "phone": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "previousOrganisations": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "previousTitles": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "relevantExperience": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "skills": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "technologies": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "text": {
+        "analyzer": "lucene.standard",
+        "type": "string"
+      },
+      "totalExperience": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "uploadedAt": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      },
+      "yearsOfExperience": {
+        "analyzer": "lucene.keyword",
+        "type": "string"
+      }
+    }
+  }
+}

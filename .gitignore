@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Build and local runtime
+dist/
+uploads/
+reports/
+
+# OS and logs
+.DS_Store
+*.log
